@@ -36,6 +36,7 @@
 ### **Export Node Group**
 - This button exports the *Node Group* to a JSON file.
 - It wiil export the selected *Node Group* in the ***Node Group Panel** and use the selected indent amount to create the JSON file.
+- You must select a directory to save the file in. The file is automatically named after the selected *Node Group*. If a file is selected for the save directory, the parent directory is used instead.
 
 ## **Additional Information**
 Included in this Add-on is a **node_to_json.whl** file. It is installed *offline*. It is available for your projects and can be installed through pypi.
