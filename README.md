@@ -2,7 +2,7 @@
 ### Add-on for Blender 5.2 to save Node Groups to JSON file and load Node Groups from JSON files.
 
 ## **Installation**
-### Install from zip as a legacy addon. ==Only download the zip from the release==. **Do Not Download** from this page.
+### Install from zip as a legacy addon. **Only download** the zip from the release. **Do Not Download** from this page.
 1. Open the ***Preferences*** Panel.
 2. Select the ***Add-ons*** tab.
 3. Press the ***Install from Disk...*** button.
