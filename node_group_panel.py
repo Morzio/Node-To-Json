@@ -80,6 +80,7 @@ class NODES_PT_ng_panel(bpy.types.Panel):
 class SCENE_OT_add_node_group_item(bpy.types.Operator):
     bl_idname = "scene.add_node_group_item"
     bl_label = "Populate Node Groups"
+    bl_options = {'REGISTER', 'UNDO'}
 
     def execute(self, context):
         populate_node_groups(context)
@@ -90,6 +91,7 @@ class NodeGroupDetector(bpy.types.Operator):
     """Listener to detect when a new Node Group is added to the scene"""
     bl_idname = "scene.detect_new_node_group"
     bl_label = "Detect New Node Group"
+    bl_options = {'REGISTER', 'UNDO', 'INTERNAL'}
 
     _timer = None
     _prev_group_names = set()
@@ -116,6 +118,7 @@ class ExportSerializedNodeGroup(bpy.types.Operator, ExportHelper):
     """Export Serialized Node Group Data """
     bl_idname = "scene.serialize_node_group"
     bl_label = "Export Node Group"
+    bl_options = {'REGISTER'}
 
     use_filter_folder = True
 
@@ -157,6 +160,7 @@ class ImportNodeGroupData(bpy.types.Operator, ImportHelper):
     """Import Node Group JSON Data"""
     bl_idname = "scene.json_node_group" 
     bl_label = "Import Node Group"
+    bl_options = {'REGISTER'}
 
     filename_ext = ".json"
 

@@ -1,7 +1,7 @@
 bl_info = {
     "name": "Node_To_Json",
     "Author": "Demingo Hill (Noizirom) (C)",
-    "version": (0,1,0),
+    "version": (0,1,2),
     "blender": (5, 2, 0),
     "location": "Node Editor > Sidebar > Node To Json",
     "description": "Save Node Groups to JSON and load Node Groups from JSON.",
@@ -51,18 +51,20 @@ def register():
     try:
         install_package("node_to_json")
     except Exception as e:
-        print(e)
+        print("[INSTALL]", e)
         pass
     # Register all modules. If a RuntimeError occurs, uninstall node_to_json
     try:
         from .node_group_panel import register as _reg
         _reg()
+        bpy.app.timers.register(delayed_setup)
     except RuntimeError as e:
-        print(e)
+        print("[RUNTIME]", e)
         pip_uninstall("node_to_json")
         pass
-    # Necessary to invoke listener after addon is set up
-    bpy.app.timers.register(delayed_setup)
+    # finally:
+    #     # Necessary to invoke listener after addon is set up
+    #     bpy.app.timers.register(delayed_setup)
 
 
 
