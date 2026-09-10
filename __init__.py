@@ -1,7 +1,7 @@
 bl_info = {
     "name": "Node_To_Json",
     "Author": "Demingo Hill (Noizirom) (C)",
-    "version": (0,1,2),
+    "version": (0,1,3),
     "blender": (5, 2, 0),
     "location": "Node Editor > Sidebar > Node To Json",
     "description": "Save Node Groups to JSON and load Node Groups from JSON.",
